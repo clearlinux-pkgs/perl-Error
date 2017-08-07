@@ -1,5 +1,5 @@
 PKG_NAME := perl-Error
-URL := http://search.cpan.org/CPAN/authors/id/S/SH/SHLOMIF/Error-0.17024.tar.gz
+URL := https://www.cpan.org/authors/id/S/SH/SHLOMIF/Error-0.17025.tar.gz
 
 
 include ../common/Makefile.common
