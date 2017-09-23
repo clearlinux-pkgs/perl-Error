@@ -4,7 +4,7 @@
 #
 Name     : perl-Error
 Version  : 0.17025
-Release  : 12
+Release  : 13
 URL      : https://www.cpan.org/authors/id/S/SH/SHLOMIF/Error-0.17025.tar.gz
 Source0  : https://www.cpan.org/authors/id/S/SH/SHLOMIF/Error-0.17025.tar.gz
 Summary  : 'Error/exception handling in an OO-ish way'
@@ -66,8 +66,8 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/site_perl/5.26.0/Error.pm
-/usr/lib/perl5/site_perl/5.26.0/Error/Simple.pm
+/usr/lib/perl5/site_perl/5.26.1/Error.pm
+/usr/lib/perl5/site_perl/5.26.1/Error/Simple.pm
 
 %files doc
 %defattr(-,root,root,-)
