@@ -4,7 +4,7 @@
 #
 Name     : perl-Error
 Version  : 0.17025
-Release  : 13
+Release  : 14
 URL      : https://www.cpan.org/authors/id/S/SH/SHLOMIF/Error-0.17025.tar.gz
 Source0  : https://www.cpan.org/authors/id/S/SH/SHLOMIF/Error-0.17025.tar.gz
 Summary  : 'Error/exception handling in an OO-ish way'
