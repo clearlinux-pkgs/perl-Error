@@ -1,9 +1,18 @@
 # This file contains recursive sources that require this package
 LVM2
+R-NMF
 R-devtools
+R-doRNG
 R-git2r
+R-modelr
+R-pkgmaker
+R-reprex
+R-rngtools
 R-roxygen2
+R-rstanarm
+R-tidyverse
 autofs
+clr-init
 filesystem
 git
 kmod
@@ -16,5 +25,6 @@ linux-hyperv-lts
 linux-hyperv-mini
 linux-kvm
 linux-lts
+linux-oracle
+linux-pk414
 linux-tools
-scala
