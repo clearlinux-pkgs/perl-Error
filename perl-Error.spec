@@ -4,13 +4,14 @@
 #
 Name     : perl-Error
 Version  : 0.17026
-Release  : 16
-URL      : https://www.cpan.org/authors/id/S/SH/SHLOMIF/Error-0.17026.tar.gz
-Source0  : https://www.cpan.org/authors/id/S/SH/SHLOMIF/Error-0.17026.tar.gz
+Release  : 17
+URL      : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Error-0.17026.tar.gz
+Source0  : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Error-0.17026.tar.gz
 Summary  : 'Error/exception handling in an OO-ish way'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl GPL-2.0
-Requires: perl-Error-doc
+Requires: perl-Error-license
+Requires: perl-Error-man
 BuildRequires : perl(Module::Build)
 
 %description
@@ -18,12 +19,20 @@ This archive contains the distribution Error,
 version 0.17026:
 Error/exception handling in an OO-ish way
 
-%package doc
-Summary: doc components for the perl-Error package.
-Group: Documentation
+%package license
+Summary: license components for the perl-Error package.
+Group: Default
 
-%description doc
-doc components for the perl-Error package.
+%description license
+license components for the perl-Error package.
+
+
+%package man
+Summary: man components for the perl-Error package.
+Group: Default
+
+%description man
+man components for the perl-Error package.
 
 
 %prep
@@ -51,6 +60,8 @@ make TEST_VERBOSE=1 test
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/doc/perl-Error
+cp LICENSE %{buildroot}/usr/share/doc/perl-Error/LICENSE
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot}
 else
@@ -66,6 +77,11 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/lib/perl5/site_perl/5.26.1/Error.pm
 /usr/lib/perl5/site_perl/5.26.1/Error/Simple.pm
 
-%files doc
-%defattr(0644,root,root,0755)
-%doc /usr/share/man/man3/*
+%files license
+%defattr(-,root,root,-)
+/usr/share/doc/perl-Error/LICENSE
+
+%files man
+%defattr(-,root,root,-)
+/usr/share/man/man3/Error.3
+/usr/share/man/man3/Error::Simple.3
