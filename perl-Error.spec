@@ -4,7 +4,7 @@
 #
 Name     : perl-Error
 Version  : 0.17027
-Release  : 28
+Release  : 29
 URL      : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Error-0.17027.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Error-0.17027.tar.gz
 Summary  : Perl/CPAN Error module - Error/exception handling in an OO-ish way
