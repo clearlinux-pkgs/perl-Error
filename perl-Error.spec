@@ -4,13 +4,14 @@
 #
 Name     : perl-Error
 Version  : 0.17028
-Release  : 31
+Release  : 32
 URL      : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Error-0.17028.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Error-0.17028.tar.gz
-Summary  : Perl/CPAN Error module - Error/exception handling in an OO-ish way
+Summary  : 'Error/exception handling in an OO-ish way'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl GPL-2.0
 Requires: perl-Error-license = %{version}-%{release}
+Requires: perl-Error-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
 
 %description
@@ -22,7 +23,6 @@ Error/exception handling in an OO-ish way
 Summary: dev components for the perl-Error package.
 Group: Development
 Provides: perl-Error-devel = %{version}-%{release}
-Requires: perl-Error = %{version}-%{release}
 Requires: perl-Error = %{version}-%{release}
 
 %description dev
@@ -37,8 +37,18 @@ Group: Default
 license components for the perl-Error package.
 
 
+%package perl
+Summary: perl components for the perl-Error package.
+Group: Default
+Requires: perl-Error = %{version}-%{release}
+
+%description perl
+perl components for the perl-Error package.
+
+
 %prep
 %setup -q -n Error-0.17028
+cd %{_builddir}/Error-0.17028
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -63,7 +73,7 @@ make TEST_VERBOSE=1 test
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/perl-Error
-cp LICENSE %{buildroot}/usr/share/package-licenses/perl-Error/LICENSE
+cp %{_builddir}/Error-0.17028/LICENSE %{buildroot}/usr/share/package-licenses/perl-Error/38e94f89ec602e1a6495ef7c30477d01aeefedc9
 if test -f Makefile.PL; then
 make pure_install PERL_INSTALL_ROOT=%{buildroot} INSTALLDIRS=vendor
 else
@@ -76,8 +86,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/Error.pm
-/usr/lib/perl5/vendor_perl/5.28.2/Error/Simple.pm
 
 %files dev
 %defattr(-,root,root,-)
@@ -86,4 +94,9 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/perl-Error/LICENSE
+/usr/share/package-licenses/perl-Error/38e94f89ec602e1a6495ef7c30477d01aeefedc9
+
+%files perl
+%defattr(-,root,root,-)
+/usr/lib/perl5/vendor_perl/5.30.1/Error.pm
+/usr/lib/perl5/vendor_perl/5.30.1/Error/Simple.pm
