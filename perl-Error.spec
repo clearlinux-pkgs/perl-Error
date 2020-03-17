@@ -4,10 +4,10 @@
 #
 Name     : perl-Error
 Version  : 0.17029
-Release  : 33
+Release  : 34
 URL      : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Error-0.17029.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Error-0.17029.tar.gz
-Summary  : Perl/CPAN Error module - Error/exception handling in an OO-ish way
+Summary  : 'Error/exception handling in an OO-ish way'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl GPL-2.0
 Requires: perl-Error-license = %{version}-%{release}
@@ -23,7 +23,6 @@ Error/exception handling in an OO-ish way
 Summary: dev components for the perl-Error package.
 Group: Development
 Provides: perl-Error-devel = %{version}-%{release}
-Requires: perl-Error = %{version}-%{release}
 Requires: perl-Error = %{version}-%{release}
 
 %description dev
@@ -99,5 +98,5 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/Error.pm
-/usr/lib/perl5/vendor_perl/5.30.1/Error/Simple.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Error.pm
+/usr/lib/perl5/vendor_perl/5.30.2/Error/Simple.pm
