@@ -4,7 +4,7 @@
 #
 Name     : perl-Error
 Version  : 0.17029
-Release  : 37
+Release  : 38
 URL      : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Error-0.17029.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Error-0.17029.tar.gz
 Summary  : 'Error/exception handling in an OO-ish way'
@@ -13,6 +13,7 @@ License  : Artistic-1.0-Perl GPL-2.0
 Requires: perl-Error-license = %{version}-%{release}
 Requires: perl-Error-perl = %{version}-%{release}
 BuildRequires : buildreq-cpan
+BuildRequires : perl(Module::Build)
 
 %description
 This archive contains the distribution Error,
