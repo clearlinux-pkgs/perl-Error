@@ -4,7 +4,7 @@
 #
 Name     : perl-Error
 Version  : 0.17029
-Release  : 42
+Release  : 43
 URL      : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Error-0.17029.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SH/SHLOMIF/Error-0.17029.tar.gz
 Summary  : 'Error/exception handling in an OO-ish way'
@@ -99,5 +99,4 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.34.0/Error.pm
-/usr/lib/perl5/vendor_perl/5.34.0/Error/Simple.pm
+/usr/lib/perl5/*
